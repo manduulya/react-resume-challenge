@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>React Hello World</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Sally Student Resume</title>
 </head>
 <body>
-    <div id="application-root"></div>
-
+    <main id="application-root"></main>
 
     <script
         src="https://unpkg.com/babel-standalone@6/babel.min.js">
@@ -23,18 +23,55 @@
         function App(props) {
             console.log(props)
             return (
-                <header>
+                <section>
                 {props.children}
-                </header>
+                </section>
             );
         }
 
             // Nested elements inside the App
         ReactDOM.render(
-            <App className='my-class'>
-                <div>
-                    <h1><span>Current Page Title!</span></h1>
-                </div>
+            <App>
+            <section>
+                <h1>Sally George</h1>
+                <address>Email address: <a href="mailto:sally@example.com">sally@example.com</a>
+                </address>
+                <p>Phone number: 123-456-7890</p>
+                <img src="https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg" alt="Sally's picture" />
+            </section>
+            <section>
+                <header>
+                <h2>Education</h2>
+                </header>
+                <ul>
+                <li>Atlanta Graduate School of Management | Atlanta, GA<br/>
+                    Master’s of Business Administration (MBA)<br/>
+                    Master’s of Science in Information Systems (MSIS)
+                </li>
+                <li>
+                    University of Georgia | Athens, GA<br/>
+                    Bachelor’s of Accountancy
+                </li>
+                </ul>
+                <header>
+                <h2>Employment History</h2>
+                </header>
+                <ul>
+                <li>
+                    EXECUTIVE ASSISTANT (February 2008 – Present)<br/>
+                    ABC ENTERPRISES, Tampa, Florida
+                    <p><em>Meticulously perform executive administrative functions for C-level officers of global development group. Schedule and supervise team of five administrative assistants and receptionists; make all arrangements for travel, public and stakeholder relations functions, conferences, and meetings.</em>
+                    </p>
+                </li>
+                <li>
+                    EXECUTIVE ASSISTANT (November 2004 – January 2007)<br/>
+                    OCEANSIDE INVESTMENTS, Tampa, Florida
+                    <p><em>
+                    Provided comprehensive administrative support to CEO of established real estate investment firm. Scope of responsibility included meeting and appointment scheduling, minutes compilation, travel arrangements, and correspondence administration.</em>
+                    </p>
+                </li>
+                </ul>
+            </section>
             </App>,
             document.querySelector('#application-root')
         );

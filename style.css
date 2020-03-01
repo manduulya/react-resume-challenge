@@ -1,0 +1,19 @@
+body{
+    background: rgb(228, 242, 238);
+    text-align: center;
+    padding: 40px 0 40px 0;
+    width: 80%;
+    margin: 0 auto;
+}
+img{
+    width: 40%;
+}
+h1{
+    text-transform: uppercase;
+}
+li{
+    list-style-type: none;
+}
+ul{
+    padding: 0;
+}
